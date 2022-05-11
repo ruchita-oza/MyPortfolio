@@ -1,6 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faUser,
+  faComments,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
 import "./aside.css";
 function aside() {
+  // fontawesome.library.add(faHouse, faUser, faBriefcase);
   return (
     <div className="aside">
       <div className="logo">
@@ -14,22 +22,29 @@ function aside() {
       <ul className="nav">
         <li>
           <a href="#home" className="active">
-            <i className="fa fa-home"></i> Home
+            <FontAwesomeIcon className="fa " icon={faHouse}></FontAwesomeIcon>{" "}
+            Home
           </a>
         </li>
         <li>
           <a href="#about">
-            <i className="fa fa-user"></i> About
+            <FontAwesomeIcon className="fa " icon={faUser}></FontAwesomeIcon>{"  "}
+            About
           </a>
         </li>
         <li>
           <a href="#portfolio">
-            <i className="fa fa-briefcase"></i> Project
+            <FontAwesomeIcon
+              className="fa"
+              icon={faBriefcase}
+            ></FontAwesomeIcon>
+            Project
           </a>
         </li>
         <li>
           <a href="#contact">
-            <i className="fa fa-comments"></i> Contact me
+            <FontAwesomeIcon className="fa" icon={faComments}></FontAwesomeIcon>
+            Contact me
           </a>
         </li>
       </ul>

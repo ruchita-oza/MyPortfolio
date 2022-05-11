@@ -1,5 +1,9 @@
 import React from "react";
 import "./contact.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faGlobeEurope } from "@fortawesome/free-solid-svg-icons";
+
 function contact() {
   return (
     <section className="contact section" id="contact">
@@ -15,7 +19,10 @@ function contact() {
           {/* <!-- contact info item start --> */}
           <div className="contact-info-item">
             <div className="icon">
-              <i className="fa fa-envelope padd-15"></i>
+              <FontAwesomeIcon
+                className="fa padd-15"
+                icon={faEnvelope}
+              ></FontAwesomeIcon>
               <h4>Contact Me On</h4>
               <p>ruchitaoza9@gmail.com</p>
             </div>
@@ -24,7 +31,10 @@ function contact() {
           {/* <!-- contact info item start --> */}
           <div className="contact-info-item padd-15">
             <div className="icon">
-              <i className="fa fa-globe-europe padd-15"></i>
+              <FontAwesomeIcon
+                className="fa  padd-15"
+                icon={faGlobeEurope}
+              ></FontAwesomeIcon>
               <h4>website</h4>
               <p>Www.ruchitaoza.com</p>
             </div>
@@ -34,7 +44,10 @@ function contact() {
           <div className="contact-info-item padd-15">
             <a href="https://github.com/ruchita-oza">
               <div className="icon">
-                <i className="fa-brands fa-github padd-15"></i>
+                <FontAwesomeIcon
+                  className="fa-brands  padd-15"
+                  icon={faGithub}
+                ></FontAwesomeIcon>
                 <h4>Github</h4>
                 <p>https://github.com/ruchita-oza</p>
               </div>
@@ -45,7 +58,10 @@ function contact() {
           <div className="contact-info-item padd-15">
             <a href="https://www.linkedin.com/in/ruchita-oza-5863181b6/">
               <div className="icon">
-                <i className="fa-brands fa-linkedin padd-15"></i>
+                <FontAwesomeIcon
+                  className="fa-brands padd-15"
+                  icon={faLinkedin}
+                ></FontAwesomeIcon>
                 <h4>Linkedin</h4>
                 <p>https://www.linkedin.com/in/ruchita-oza-5863181b6/</p>
               </div>

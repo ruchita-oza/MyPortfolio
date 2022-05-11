@@ -1,5 +1,8 @@
 import React from "react";
 import "./about.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+
 function about() {
   return (
     <div>
@@ -149,7 +152,11 @@ function about() {
                         <div className="timeline-item">
                           <div className="circle-dot"></div>
                           <h3 className="timeline-date">
-                            <i className="fa fa-calendar"></i> 2019-Present
+                            <FontAwesomeIcon
+                              className="fa"
+                              icon={faCalendar}
+                            ></FontAwesomeIcon>
+                            2019-Present
                           </h3>
                           <h4 className="timeline-title">
                             B.E. in computer science
@@ -163,7 +170,11 @@ function about() {
                         <div className="timeline-item">
                           <div className="circle-dot"></div>
                           <h3 className="timeline-date">
-                            <i className="fa fa-calendar"></i> 2017-2019
+                            <FontAwesomeIcon
+                              className="fa"
+                              icon={faCalendar}
+                            ></FontAwesomeIcon>{" "}
+                            2017-2019
                           </h3>
                           <h4 className="timeline-title">12th Board</h4>
                           <p className="timeline-text">
@@ -175,7 +186,11 @@ function about() {
                         <div className="timeline-item">
                           <div className="circle-dot"></div>
                           <h3 className="timeline-date">
-                            <i className="fa fa-calendar"></i> 2015-2017
+                            <FontAwesomeIcon
+                              className="fa"
+                              icon={faCalendar}
+                            ></FontAwesomeIcon>{" "}
+                            2015-2017
                           </h3>
                           <h4 className="timeline-title">10th Board</h4>
                           <p className="timeline-text">
@@ -195,7 +210,11 @@ function about() {
                         <div className="timeline-item">
                           <div className="circle-dot"></div>
                           <h3 className="timeline-date">
-                            <i className="fa fa-calendar"></i> 2022-Present
+                            <FontAwesomeIcon
+                              className="fa"
+                              icon={faCalendar}
+                            ></FontAwesomeIcon>{" "}
+                            2022-Present
                           </h3>
                           <h4 className="timeline-title">
                             Summer Intern AT ATLIQ vadodara , India.
@@ -212,7 +231,11 @@ function about() {
                         <div className="timeline-item">
                           <div className="circle-dot"></div>
                           <h3 className="timeline-date">
-                            <i className="fa fa-calendar"></i> 10/2020 - Present
+                            <FontAwesomeIcon
+                              className="fa"
+                              icon={faCalendar}
+                            ></FontAwesomeIcon>{" "}
+                            10/2020 - Present
                           </h3>
                           <h4 className="timeline-title">
                             Graphic Designer At Samvaad DDU Club
