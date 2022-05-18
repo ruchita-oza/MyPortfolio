@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   color: var(--text-black-900);
+  align-items: center;
 }
 h3.hello {
   flex: 0 0 60%;
@@ -59,18 +60,47 @@ h3.my-profession {
   max-width: 75%;
   background: red;
   text-align: center;
-  position: relative;
+  /* position: relative; */
 }
 /* .home .home-img img {
   height: 400px;
 } */
 
-@media (max-width: 991px) {
+@media (max-width: 1124px) {
   .home .home-info {
     flex: 0 0 100%;
     max-width: 100%;
   }
   .home .home-img {
-    display: none;
+    flex: 0 0 100%;
+    max-width: 60%;
+    margin-top: 60px;
+
+    /* display: none; */
+  }
+}
+@media (max-width: 991px) {
+  .home .home-img {
+    max-width: 70%;
+  }
+  .home .home-img::after,
+  .home .home-img::before {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .home .home-img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 339px) {
+  .home .home-img {
+    max-width: 100%;
+  }
+  .home .home-img::after,
+  .home .home-img::before {
+    height: 40px;
+    width: 40px;
   }
 }

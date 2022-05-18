@@ -4,6 +4,54 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 function about() {
+  const aboutMe = [
+    { title: "Birthday", span: "17 oct 2001" },
+    { title: "Age", span: "20" },
+    { title: "Email", span: "ruchitaoza9@gmail.com" },
+    { title: "Degree", span: "CS('23)" },
+    { title: "City", span: "Amreli , Gujarat" },
+    { title: "FreeLance", span: "Available" },
+  ];
+  const skillItems = [
+    { skill: "Problem-solving", accuracy: "76%" },
+    { skill: "MERN", accuracy: "82%" },
+    { skill: "SQL", accuracy: "70%" },
+    { skill: "Python - Django", accuracy: "62%" },
+    { skill: "DSA", accuracy: "80%" },
+    { skill: "ASP.NET", accuracy: "89%" },
+  ];
+  const Educations = [
+    {
+      date: "2019-Present",
+      title: "B.E. in computer science",
+      description: "Dharamsinh desai university - Nadiad, India with CPI 8.33",
+    },
+    {
+      date: "2017-2019",
+      title: "12th Board",
+      description:
+        "Oxford school , Amreli india with 89% in GSEB , JEE score - 98.39 pr",
+    },
+    {
+      date: "2015-2017",
+      title: "10th Board",
+      description: "Sankul , Amreli india with 92% in GSEB",
+    },
+  ];
+  const Experiences = [
+    {
+      date: "2022 - Present",
+      title: "Summer Intern AT ATLIQ vadodara , India.",
+      description:
+        "AtliQ was established in 2017 as an IT services company with the aim to help businesses integrate their processes with automated tools. As a first industry experience , I personally found This team sorry this family better.",
+    },
+    {
+      date: "2020 - Present",
+      title: "Graphic Designer At Samvaad DDU Club",
+      description:
+        "Samvaad is a basically communication club in our collage. I'm Head of graphic designers in this club. This club helped me a lot to work on my communication in a team which really helped me to improve my teamwork skill. ",
+    },
+  ];
   return (
     <div>
       {" "}
@@ -31,40 +79,18 @@ function about() {
               <div className="row">
                 <div className="personal-info padd-15">
                   <div className="row">
-                    <div className="info-item padd-15">
-                      <p>
-                        Birthdate : <span>17 oct 2001</span>
-                      </p>
-                    </div>
-                    <div className="info-item padd-15">
-                      <p>
-                        Age : <span>20</span>
-                      </p>
-                    </div>
-                    <div className="info-item padd-15">
-                      <p>
-                        Email : <span>ruchita@atliq.com</span>
-                      </p>
-                    </div>
-                    <div className="info-item padd-15">
-                      <p>
-                        Degree : <span>CS ('23)</span>
-                      </p>
-                    </div>
-                    <div className="info-item padd-15">
-                      <p>
-                        City : <span>Amreli , Gujarat</span>
-                      </p>
-                    </div>
-                    <div className="info-item padd-15">
-                      <p>
-                        FreeLnace : <span>Available , Gujarat</span>
-                      </p>
-                    </div>
+                    {aboutMe &&
+                      aboutMe.map((about, index) => (
+                        <div className="info-item padd-15" key={index}>
+                          <p>
+                            {about.title} : <span>{about.span}</span>
+                          </p>
+                        </div>
+                      ))}
                   </div>
                   <div className="row">
                     <div className="buttons">
-                      <a href="#content" className="btn hire-me">
+                      <a href="#contact" className="btn hire-me">
                         Hire me
                       </a>
                       <a
@@ -79,66 +105,21 @@ function about() {
                 </div>
                 <div className="skills padd-15">
                   <div className="row">
-                    <div className="skill-item padd-15">
-                      <h5>Problem-solving</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "76%" }}
-                        ></div>
-                        <div className="skill-percent">76%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>MERN</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "82%" }}
-                        ></div>
-                        <div className="skill-percent">82%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>SQL</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "70%" }}
-                        ></div>
-                        <div className="skill-percent">70%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>Python- Django</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "62%" }}
-                        ></div>
-                        <div className="skill-percent">62%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>DSA</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "76%" }}
-                        ></div>
-                        <div className="skill-percent">80%</div>
-                      </div>
-                    </div>
-                    <div className="skill-item padd-15">
-                      <h5>ASP.NET</h5>
-                      <div className="progress">
-                        <div
-                          className="progress-in"
-                          style={{ width: "89%" }}
-                        ></div>
-                        <div className="skill-percent">89%</div>
-                      </div>
-                    </div>
+                    {skillItems &&
+                      skillItems.map((skillItem, index) => (
+                        <div className="skill-item padd-15" key={index}>
+                          <h5>{skillItem.skill}</h5>
+                          <div className="progress">
+                            <div
+                              className="progress-in"
+                              style={{ width: skillItem.accuracy }}
+                            ></div>
+                            <div className="skill-percent">
+                              {skillItem.accuracy}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -149,54 +130,25 @@ function about() {
                     <div className="timeline-box padd-15">
                       <div className="timeline shadow-dark">
                         {/* <!-- timeline item --> */}
-                        <div className="timeline-item">
-                          <div className="circle-dot"></div>
-                          <h3 className="timeline-date">
-                            <FontAwesomeIcon
-                              className="fa"
-                              icon={faCalendar}
-                            ></FontAwesomeIcon>
-                            2019-Present
-                          </h3>
-                          <h4 className="timeline-title">
-                            B.E. in computer science
-                          </h4>
-                          <p className="timeline-text">
-                            Dharamsinh desai university - Nadiad, India with CPI
-                            8.33
-                          </p>
-                        </div>
-                        {/* <!-- timeline item --> */}
-                        <div className="timeline-item">
-                          <div className="circle-dot"></div>
-                          <h3 className="timeline-date">
-                            <FontAwesomeIcon
-                              className="fa"
-                              icon={faCalendar}
-                            ></FontAwesomeIcon>{" "}
-                            2017-2019
-                          </h3>
-                          <h4 className="timeline-title">12th Board</h4>
-                          <p className="timeline-text">
-                            Oxford school , Amreli india with 89% in GSEB , JEE
-                            score - 98.39 pr
-                          </p>
-                        </div>
-                        {/* <!-- timeline item --> */}
-                        <div className="timeline-item">
-                          <div className="circle-dot"></div>
-                          <h3 className="timeline-date">
-                            <FontAwesomeIcon
-                              className="fa"
-                              icon={faCalendar}
-                            ></FontAwesomeIcon>{" "}
-                            2015-2017
-                          </h3>
-                          <h4 className="timeline-title">10th Board</h4>
-                          <p className="timeline-text">
-                            Sankul , Amreli india with 92% in GSEB
-                          </p>
-                        </div>
+                        {Educations &&
+                          Educations.map((education, index) => (
+                            <div className="timeline-item" key={index}>
+                              <div className="circle-dot"></div>
+                              <h3 className="timeline-date">
+                                <FontAwesomeIcon
+                                  className="fa"
+                                  icon={faCalendar}
+                                ></FontAwesomeIcon>
+                                {education.date}
+                              </h3>
+                              <h4 className="timeline-title">
+                                {education.title}
+                              </h4>
+                              <p className="timeline-text">
+                                {education.description}
+                              </p>
+                            </div>
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -207,47 +159,25 @@ function about() {
                     <div className="timeline-box padd-15">
                       <div className="timeline shadow-dark">
                         {/* <!-- timeline item --> */}
-                        <div className="timeline-item">
-                          <div className="circle-dot"></div>
-                          <h3 className="timeline-date">
-                            <FontAwesomeIcon
-                              className="fa"
-                              icon={faCalendar}
-                            ></FontAwesomeIcon>{" "}
-                            2022-Present
-                          </h3>
-                          <h4 className="timeline-title">
-                            Summer Intern AT ATLIQ vadodara , India.
-                          </h4>
-                          <p className="timeline-text">
-                            AtliQ was established in 2017 as an IT services
-                            company with the aim to help businesses integrate
-                            their processes with automated tools. As a first
-                            industry experience , I personally found This team
-                            sorry this family better.
-                          </p>
-                        </div>
-                        {/* <!-- timeline item --> */}
-                        <div className="timeline-item">
-                          <div className="circle-dot"></div>
-                          <h3 className="timeline-date">
-                            <FontAwesomeIcon
-                              className="fa"
-                              icon={faCalendar}
-                            ></FontAwesomeIcon>{" "}
-                            10/2020 - Present
-                          </h3>
-                          <h4 className="timeline-title">
-                            Graphic Designer At Samvaad DDU Club
-                          </h4>
-                          <p className="timeline-text">
-                            Samvaad is a basically communication club in our
-                            collage. I'm Head of graphic designers in this club.
-                            This club helped me a lot to work on my
-                            communication in a team which really helped me to
-                            improve my teamwork skill.
-                          </p>
-                        </div>
+                        {Experiences &&
+                          Experiences.map((experience, index) => (
+                            <div className="timeline-item" key={index}>
+                              <div className="circle-dot"></div>
+                              <h3 className="timeline-date">
+                                <FontAwesomeIcon
+                                  className="fa"
+                                  icon={faCalendar}
+                                ></FontAwesomeIcon>{" "}
+                                {experience.date}
+                              </h3>
+                              <h4 className="timeline-title">
+                                {experience.title}
+                              </h4>
+                              <p className="timeline-text">
+                                {experience.description}
+                              </p>
+                            </div>
+                          ))}
                       </div>
                     </div>
                   </div>

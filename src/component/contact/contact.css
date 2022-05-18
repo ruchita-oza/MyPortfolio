@@ -67,9 +67,7 @@
 .contact .contact-form .form-item .form-control:focus {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
-.contact .control-form .form-item textarea.form-control {
-  height: 200px;
-}
+
 .contact .control-form .btn {
   height: 50px;
   padding: 0 50px;
@@ -84,7 +82,11 @@
 
 @media (max-width: 768px) {
   .contact .contact-form .col-6,
-  .contact .contact-form-item {
+  .contact .contact-info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  submit-btn {
     flex: 0 0 100%;
     max-width: 100%;
   }
